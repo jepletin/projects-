@@ -1,6 +1,6 @@
 # 1 What is JavaScript Variables
 Variables are containers for storing data.
-  
+ 
 ### example
 x=5 where xis 5 and 5 is x.
 
