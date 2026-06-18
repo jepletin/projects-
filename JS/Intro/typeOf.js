@@ -13,11 +13,11 @@ let unValue;
 console.log("unValue",unValue,"Its type is ",typeof unValue)
 
 
-const bonus="200"
+const bonus=2000
 const sallary =100000;
 const sallaryGross=bonus+sallary;
 console.log( "Gross sallary is ", sallaryGross,  "its type" ,typeof sallaryGross);
-const paye =salaryGross*0.16;
+const paye =sallaryGross*0.16;
 console.log( "For Gross salary of ","sallarGross","paye is",paye);
 const nhif=2500;
 console.log("Nhif deduction", nhif);
@@ -25,5 +25,5 @@ const sha = 2500;
 console.log("SHA is ", sha);
 const totalDeduction=paye+nhif+sha;
 console.log( "Total deduction are ", totalDeduction);
-const netsallary= salaryGross-totalDeduction;
+const netsallary= sallaryGross-totalDeduction;
 console.log( "Your net salary",netsallary);
