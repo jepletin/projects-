@@ -10,7 +10,7 @@ console .log(number3);
 //single quotes
 //back ticks 
 let str1="iam lydia jepleting" //double
-console.log(str1);
+console.log(str1=${str1});
 let str2 ='single quotes iam lydia jepleting '//single quotes
 console.log(str2);
 let str3=`back  ticks iam jepleting ` //back ticks
