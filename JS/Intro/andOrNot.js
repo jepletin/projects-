@@ -1,3 +1,14 @@
+/*comparison operators 
+comparison operators evaluate to only true or false*/
+
+/*And ..>&&
+truth table ..all possible combinations
+val1 and val2 
+combinations  are
+val1&&val2
+val2&&val1
+..>for and all statement have to be true for it to be true */
+
 let val1=true;
 let val2=false;
 let  results=val1&&val2;
@@ -18,4 +29,15 @@ console.log(`mercy  is age  is greater than 18
      let simplified=mercy_age>18&& mercy_balance>20000;
      console.log(`simplified ${simplified}`)
      console.log(`further simplification is ${mercy_age>18&&mercy_balance>20000}`)
+
+//mercy_age >18 &&mercy_balance>20000
+console.log(`mercy  is age  is greater than 18 
+     and has more than 20k in her account 
+     ${ is_greater_than_18||has_more_than_20k}`)
+
+     /* or atleast one statement has to be true for the whole statement */
+
+     console.log(`This is not true ${!true }`)
+     
+     console.log(`This is not false ${!false}`)
 
