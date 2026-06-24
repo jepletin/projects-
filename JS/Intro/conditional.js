@@ -1,6 +1,6 @@
 //senario 1 
-let age=18;
-if(age){
+let Age=18;
+if(Age){
     console.log("senario 1 it runs")
 }
 //senario 2
@@ -34,4 +34,40 @@ if  (20>10){
     console.log("senario 6 it run")
 
 }
+
+//let start with if .its special .you can use it on its on 
+//if is independent. one statement does not depend on another
+
+let age=prompt("Enter your age:")
+alert(`you entered ${age}`)
+//45>10
+if (age>10){
+    alert(`you are a baby`)
+}
+
+//45>13
+if (age>13){
+    alert(`you are a teen`)
+}
+//45>18
+if (age>18){
+    alert(`you can legally drink and smoke `)
+}
+//45>17
+if (age>27){
+    alert(`Best age for marriage`)
+}
+
+
+if (age>45){
+    alert(`Best age for retirement`)
+}
+
+if (age>50){
+    alert(`you are an ansestor`)
+}
+
+
+
+
 
