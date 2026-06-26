@@ -71,6 +71,6 @@ console.log(`Final PAYE (after relief): KES ${finalPayee}`);
 let totalDeducation=finalPayee+nssf+shif+housingLevy
  console.log(`The total decucation ${totalDeducation}`)
  //netpay what remain after the goverments takes what is theirs 
-let netPayee = grossMonthlySalary - nssf - shif-finalPayee;
+let netPayee = grossMonthlySalary - nssf - shif-finalPayee-housingLevy;
 console.log(`My netPayee is = ${netPayee}`);
 
