@@ -1,3 +1,4 @@
+
 /*function allows you to write reusable bits of code  
 instead of writing code againa and again you write it once and call it whenever you want to 
 To use dry (do not repeat your self ) by using code block
