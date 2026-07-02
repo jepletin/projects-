@@ -31,15 +31,17 @@ create  a function  oof your choice use name function and test it
 
 
 //step one
+/*
 function calculateVAT(amount) {
   return amount * 0.16;
 }
 
 console.log(calculateVAT(1000));
+*/
 
 
-
-/* step two
+/*
+// step two
 let vat = calculateVAT;
 console.log(vat(1000));*/
 
@@ -58,16 +60,25 @@ let vat = function calculateVAT(amount) {
 };
 
 console.log(vat(1000))*/
-
+/*
  //step 6
  let vat = function(amount) { //annonymous fuction 
   return amount * 0.16;
 };
 
-console.log(vat(1000));
-
-
-
+console.log(vat(1000));*/
+//step 7
+let vat = function(amount) { //annonymous fuction 
+  return amount * 0.16;
+};
+// steps
+//create anonymouns function
+//remove the function keywords
+//between() but an arrow=>{}
+//arrow function'
+let vat2 =(amount)=>{ //arrow fuction 
+  return amount * 0.16;
+};
 
 
 
