@@ -1,11 +1,11 @@
 /*
-our own callback functions 
+1 our own callback functions 
 doing shapes 
 ....>shapes
 circle
 triangle 
 rectangle
-for each of the shape create functions<arrowor anonymous,name
+for each of the shape create functions<arrowor anonymous,name>
 to calculate the area 
 ensure the function takes the required parameters 
 test the function 
@@ -69,15 +69,6 @@ function shape( shapeFunction,shapeName,side1,side2,side3){
 }
 shape(areCircle,"circle", 12)
 
-shape(
-    function (a,b,h){
-    return 0.5*(a+b)*h
-    },
-    "Trapezium"
-    5,
-    30,
-    25,
-);
 
    
 
