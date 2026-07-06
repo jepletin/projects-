@@ -74,3 +74,53 @@ function salaryGrossPromptProcess(){
     
  }
  factorial(5)
+
+ function factorial2(n=1, lastSolution=1){
+    //end condition
+    //5<=1 false //4<=1 false
+    //3<=1 false
+    //2<=1 false
+    // 1<=1 true
+     if (n<=1){
+        return lastSolution;//120 exit
+     }
+
+     const newSolution=n*lastSolution;
+     const newN=n-1;//5-1=4//,4-1,=3//,3-1=2// 2-1=1/
+
+     //factorial2(4,5)
+     //factorial2(3,20)
+     //factorial2(2,60)
+     //factorial2(1,120)
+     factorial2(newN,newSolution)
+
+ }
+function factorial2(n=1, lastSolution=1){
+    //end condition
+    //5<=1 false //4<=1 false
+    //3<=1 false
+    //2<=1 false
+    // 1<=1 true
+     if (n<=1){
+        return lastSolution;
+     }
+
+     const newSolution=n*lastSolution;
+     const newN=n-1;//5-1=4//,4-1,=3//,3-1=2// 2-1=1/
+
+     //factorial2(4,5)
+     //factorial2(3,20)
+     //factorial2(2,60)
+     //factorial2(1,120)
+     return factorial2(newN,newSolution)
+
+ }
+ console.log( factorial2(2,3))
+  console.log( factorial2(2,4))
+  console.log( factorial2(3,3))
+  console.log( factorial2(4,3))
+  console.log( factorial2(3,5))
+
+
+
+
