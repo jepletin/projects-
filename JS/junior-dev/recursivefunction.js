@@ -120,6 +120,8 @@ function factorial2(n=1, lastSolution=1){
   console.log( factorial2(3,3))
   console.log( factorial2(4,3))
   console.log( factorial2(3,5))
+  console.log( factorial2(6,5))
+
 
 
 
