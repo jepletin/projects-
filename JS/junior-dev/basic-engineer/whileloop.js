@@ -81,34 +81,77 @@ countDown(5);
 // 1 * 1 =
 
 
-function mathTable(){
-    let number1;
-    let number2;
-    while(true){
-        number1=Number(prompt("Enter the  first number"))
-        if(!isNaN(number1)&& number1>1){
-            break;
-        }
-        console.log("invalid ,please enter a number bigger  than 1")
-    }
-    while(true){
-        number2=Number(prompt("Enter the  second  number"));
-        if(!isNaN(number2) && number2>1){
-            break;
-        }
-        console.log("invalid ,please enter a number bigger than 1")
+// function mathTable(){
+//     let number1;
+//     let number2;
+//     while(true){
+//         number1=Number(prompt("Enter the  first number"))
+//         if(!isNaN(number1)&& number1>1){
+//             break;
+//         }
+//         console.log("invalid ,please enter a number bigger  than 1")
+//     }
+//     while(true){
+//         number2=Number(prompt("Enter the  second  number"));
+//         if(!isNaN(number2) && number2>1){
+//             break;
+//         }
+//         console.log("invalid ,please enter a number bigger than 1")
 
 
-    }
-    numbers(number1,number2);
+//     }
+//     numbers(number1,number2);
+// }
+
+// function numbers(number1,number2){
+//     while (number1<=40) {
+//         console.log(`${number1}*${number2} =${number1*number2}`)
+//         number1++
+        
+//     }
+// }
+// mathTable();
+
+function promptStudent(){
+    let num1=null;
+    let num2=null;
+     while (true) {
+        num1=prompt("Enter the first number");
+        if(isNaN(num1)){
+            continue;//restart the loop from beginning
+        }
+        num2=prompt("Enter the second number")
+        if(isNaN(num2)){
+            continue
+        }
+        num1=parseInt(num1);
+        num2=parseInt(num2);
+        if(num1<=0 ||num2<=0){
+            continue;
+        }
+        break;
+        
+     }
+     console.log("Got valid number", num1, num2);
+     MathTable(num1,num2);
 }
-
-function numbers(number1,number2){
-    while (number1<=40) {
-        console.log(`${number1}*${number2} =${number1*number2}`)
-        number1++
+function mathTable(num1,num2){
+    if(!num1||num1<0 ||!num2||num2<0){
+        console.error("Ensure number1 or number2 are numbers greater than 0");
+        return;
+    }
+    let outerLoop=num1;
+    while (outerLoop>0) {
+        let innerLoop=num2;
+        while (innerLoop>0) {
+            console.log(`outerloop=${outerLoop} innerloop=${innerLoop}`)
+            console.log(`${outerLoop}*${innerLoop}=${outerLoop}*${innerLoop
+            }`)
+            innerLoop=outerLoop-1
+            
+        }
+        outerLoop=innerLoop-1
         
     }
+
 }
-mathTable();
-//recursive
