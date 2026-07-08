@@ -1,24 +1,14 @@
-let n=0;
-let condition=true;
-while(condition){
-    console.log("n is", n); //0,1,2,3// statement 1
-    n=n+1;//tatement 1
-    if (n>1000){
-        condition=false;
-    }
+//using while loop to generate for loop
+let k=0
+while (k<0) {
+    console.log("k",k)
+    k=k+1
+    
 }
-// create a function <any name >
-//the function should take a parameter @param is a number greater than 0;
-//have a loop inside that counts down from this number use while loop it should print n 
-function countDown(N){
-    while(N>0){
-        console.log(N);
-    N--;
-    }
-
+for(letk=0;k<20;k=k+1){
+    console.log("k",k)
 }
-countDown(5);
-
+//using  for loop 
 // create a function @function1 <give it any name>.
 
 // it does not take any parameters
@@ -80,38 +70,6 @@ countDown(5);
 // 1 * 2 =
 // 1 * 1 =
 
-
-// function mathTable(){
-//     let number1;
-//     let number2;
-//     while(true){
-//         number1=Number(prompt("Enter the  first number"))
-//         if(!isNaN(number1)&& number1>1){
-//             break;
-//         }
-//         console.log("invalid ,please enter a number bigger  than 1")
-//     }
-//     while(true){
-//         number2=Number(prompt("Enter the  second  number"));
-//         if(!isNaN(number2) && number2>1){
-//             break;
-//         }
-//         console.log("invalid ,please enter a number bigger than 1")
-
-
-//     }
-//     numbers(number1,number2);
-// }
-
-// function numbers(number1,number2){
-//     while (number1<=40) {
-//         console.log(`${number1}*${number2} =${number1*number2}`)
-//         number1++
-        
-//     }
-// }
-// mathTable();
-
 function promptStudent(){
     let num1=null;
     let num2=null;
@@ -140,18 +98,12 @@ function mathTable(num1,num2){
         console.error("Ensure number1 or number2 are numbers greater than 0");
         return;
     }
-    let outerLoop=num1;
-    while (outerLoop>0) {
-        let innerLoop=num2;
-        while (innerLoop>0) {
-            console.log(`outerloop=${outerLoop} innerloop=${innerLoop}`)
-            console.log(`${outerLoop}*${innerLoop}=${outerLoop}*${innerLoop
-            }`)
-            innerLoop=outerLoop-1
-            
+    for (let i=num1;num1>=0;i++){
+        for (j=num2;num2>=0;j--){
+            console.log(`outerloop=${i}innerloop=${j}`);
+            console.log(`${i}*${j}=${i*j}`);
+
         }
-        outerLoop=innerLoop-1
-        
     }
 
 }
