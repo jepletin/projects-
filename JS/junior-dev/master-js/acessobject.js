@@ -34,52 +34,15 @@ const car={
     },
      fun_fact: "Volvo invented the three-point seatbelt in 1959 and made the patent free for everyone.",
 
-};
+}
+
 console.log(`car  datatype ${typeof car}`);
 console.log(car);
 console.log("--using console.log (table)--");
 console.table(car);
 
-
-/*
-data types<object>
-1.confirm that you are able to print the object
-and also its type
-*/
-
-// console.log(`car datatype ${typeof car}`);
-// console.log(car);
-// console.log("---using console.log(table)---");
-// console.table(car); //try this
-
-/*
-access individual parts of your object.
-2 ways of accessing object properties
-    1.dot notation<does not work for anything but Looks good>
-        -does not work for properties which are
-                -numbers
-                - string with spaces,starting with a number or special symbols
-        -can only access properties that follow variable naming rules
-    2.bracket notation<will work for everything:Looks>
-        -*access properties using variables.*
-
-For each property of your object.includes nested ones
-access it using both
-dot notation and bracket notation.
-print the value and also print its type
-
-Hint for nested properties use example. car.manufacture.name or car["managurcture"]["name"]
-*/
-
-//car and its name using dot notation
-console.log(`Name is ${car.name} its type is ${typeof car.name}`);
-
-//bracket notation
-console.log(`Name is ${car["name"]} its type is ${typeof car["name"]}`);
-
-//car model
-console.log(`Model is ${car.model} its type is ${typeof car.model}`);
-
+console.log(`The name is ${car.name} its type is ${typeof car.name}`);
+console.log(`the name is ${car["name"]} its type is ${typeof car["name"]}`);
 //bracket notation
 let v1 = "model";
 console.log(`Model is ${car[v1]} its type is ${typeof car[v1]}`);

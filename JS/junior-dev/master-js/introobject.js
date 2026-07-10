@@ -35,3 +35,8 @@ const car={
      fun_fact: "Volvo invented the three-point seatbelt in 1959 and made the patent free for everyone.",
 
 }
+
+console.log(`car  datatype ${typeof car}`);
+console.log(car);
+console.log("--using console.log (table)--");
+console.table(car);
