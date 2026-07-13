@@ -1,3 +1,31 @@
+
+/*
+Arrays are just objects.
+
+-> Specialized objects.
+
+Key: <number, string, null, undefined, boolean>
+Value: <Any data type>
+
+An array and a normal object differ in how they store keys.
+
+- Array keys are sequential.
+  They start from 0 up to n - 1,
+  based on the number of values.
+
+- When accessing array elements,
+  use only bracket notation.
+
+Example:
+arr[0]
+arr[1]
+
+Do NOT use dot notation with indexes.
+
+❌ arr.0
+✅ arr[0]
+*/
+
 let car=[
     "Volvo",
     "XC90",
