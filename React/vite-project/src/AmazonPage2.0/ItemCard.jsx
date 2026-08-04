@@ -1,8 +1,5 @@
-function ItemCard(){
-     const description=
-    "Jumping rope is one of the most efficient, portable, and cost-effective workouts available, capable of burning 200 to 300 calories in just 15 minutes.";
-    const  amount="KES 2,000";
-
+function ItemCard(Props){
+    const{description,amount,img}=Props
     return(
         <div style={{
                 display:"flex",
@@ -14,9 +11,7 @@ function ItemCard(){
             >
             
             <div style={{width: "100%",display:"flex", justifyContent:"center"}}>
-                <img 
-                width={"200px"}
-                src="https://m.media-amazon.com/images/I/71wm42EtoNL._AC_UL640_FMwebp_QL65_.jpg"/>
+                <img  width={"200px"}src={img}/>
             </div>
             <div style={{textAlign:"left",fontSize:"10px"}}>
                 {description}
