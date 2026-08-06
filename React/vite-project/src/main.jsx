@@ -1,8 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import StateAndEvent from "./StateAndEvent/form2.2"
+import SideEffectConditions from "./SideEffectsConditions/StopWatch"
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <StateAndEvent />
+    < SideEffectConditions />
   </StrictMode>,
 );
