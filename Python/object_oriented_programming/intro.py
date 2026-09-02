@@ -31,54 +31,68 @@ JS and python are object oriented.
 #is to have the name Capitalized
 #fields <properties>
 class House:
-    bedrooms=3
-    bathrooms=2
-    floors =1
-    area=120
-    owner=""
-    location=""
-    architect="KIMANI"
+    bedrooms = 3
+    bathrooms = 2
+    floors = 1
+    area = 120
+    owner = ""
+    location = ""
+    architect = "KIMANI"
 
-    def config(self,owner,location):
-        self.owner=owner
-        self.location=location
+    # js constructor
+    def _init_(self, owner, location):
+        print("Class house created. initializer called")
+        self.owner = owner
+        self.location = location
+
+    def config(self, owner, location):
+        print("Config method has run")
+        self.owner = owner
+        self.location = location
 
     def print_self(self):
-        #this <the object itself>: self<object >
+        # this object itself: self<object>
         print(self)
-        print(self.__dict__) #dictionary <print all properties>
+        print(self._dict_)  # dictionary <print all properties>
 
-#When access object properties use dot notation
-#Bracket notation is for dictionary
-#→ method . config →
-#→ print self
-lydia_house=House()
-# lydia_house.owner="Lydia"
-# lydia_house.location="Kikiyu"
-lydia_house.config(owner="Lydia",location="Kikiyu")
-print(f"Lydias House Owner {lydia_house.owner}")
-print(f"Lydias Location {lydia_house.location}")
-print(f"Lydias House Bedrooms {lydia_house.bedrooms}")
-print(f"Lydias House Bedrooms {lydia_house.bathrooms}")
-print(f"Lydias House Bedrooms {lydia_house.floors}")
-print(f"Lydias House Bedrooms {lydia_house.area}")
-print(f"Lydias House Designer {lydia_house.architect}")
+
+# When access object properties use dot notation
+# Bracket notation is for dictionary
+
+# -> method . config ->
+# -> print self
+# Instance class -> create an object from a class
+
+lydia_house = House(owner="lydia", location="Kikuyu")
+# lydia_house._init_()
+# lydia_house.owner="lydia"
+# lydia_house.location="Kikuyu"
+# lydia_house.config(owner="lydia", location="Kikuyu")
+
+print(f"lydias House Owner {lydia_house.owner}")
+print(f"lydias Location {lydia_house.location}")
+print(f"lydias House Bedrooms {lydia_house.bedrooms}")
+print(f"lydias House Bathrooms {lydia_house.bathrooms}")
+print(f"lydias House Floors {lydia_house.floors}")
+print(f"lydias House area {lydia_house.area}")
+print(f"lydias House Designer {lydia_house.architect}")
 print(f"Printing lydias house")
 lydia_house.print_self()
 print("End of print lydias")
 
 
-daniel_house=House()
-# daniel_house.owner="Daniel"
-# daniel_house.location="Muranga"
-daniel_house.config(owner="Daniel",location="Muranga")
-print(f"Daniels House Owner {daniel_house.owner}")
-print(f"Daniels Location {daniel_house.location}")
-print(f"Daniels House Bedrooms {daniel_house.bedrooms}")
-print(f"Daniels House Bathroom {daniel_house.bathrooms}")
-print(f"Daniels House Floors {daniel_house.floors}")
-print(f"Daniels House area {daniel_house.area}")
-print(f"Daniels House Designer{daniel_house.architect}")
-print(f"Printing daniels house")
-daniel_house.print_self()
+moses_house = House(owner="moses", location="Muranga")  # _init_ ()
+# moses_house.owner="moses"
+# moses_house.location="Muranga"
+# moses_house.config(owner="moses", location="Muranga")
+
+print(f"mosess House Owner {moses_house.owner}")
+print(f"mosess Location {moses_house.location}")
+print(f"mosess House Bedrooms {moses_house.bedrooms}")
+print(f"mosess House Bathroom {moses_house.bathrooms}")
+print(f"mosess House Floors {moses_house.floors}")
+print(f"mosess House area {moses_house.area}")
+print(f"mosess House Designer {moses_house.architect}")
+print(f"Printing mosess house")
+moses_house.print_self()
 print("End of print lydias")
