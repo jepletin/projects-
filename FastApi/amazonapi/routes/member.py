@@ -2,9 +2,10 @@ from fastapi import APIRouter, status, Request, HTTPException
 from pydantic import BaseModel, EmailStr
 import bcrypt
 
-router = APIRouter()
+from db import prisma
+from auth import create_access_token
 
-from app import prisma
+router = APIRouter()
 
 
 class MemberSchema(BaseModel):
@@ -18,6 +19,7 @@ class LoginSchema(BaseModel):
     password: str
 
 
+# you are not a robot.<2FA authenticat>, OTP
 @router.post("/sign-up", status_code=status.HTTP_201_CREATED)
 async def sign_up(payload: MemberSchema):
     # data validation
@@ -45,6 +47,7 @@ async def sign_up(payload: MemberSchema):
     return member
 
 
+# you are not a robot.<2FA authenticat>, OTP
 @router.post("/login", status_code=status.HTTP_201_CREATED)
 async def login(payload: LoginSchema):
 
@@ -67,4 +70,7 @@ async def login(payload: LoginSchema):
     if not bcrypt.checkpw(user_password, hashed_password):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Invalid email or password')
 
-    return {"message": "Login succesful", "member": member}
+    # email
+    encode = {"id": member.id, "random": "cool cat"}
+    token = create_access_token(encode)
+    return {"message": "Login succefull", "member": member, "token": token}

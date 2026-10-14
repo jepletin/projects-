@@ -1,15 +1,19 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from fastapi import FastAPI,Depends
 import uvicorn
 from routes.member import router as member_router
-
-from prisma import Prisma
-
-prisma=Prisma()
+from routes.product import router as product_router
+from routes.product_image import router as product_image_router
+from routes.client_order_product import router as client_order_product_router
+from routes.client_order import router as client_order_router
+from db import prisma
+from auth import get_current_member
+from seed import seed_status
 
 @asynccontextmanager
 async def lifespan(app:FastAPI):
     await prisma.connect()
+    await seed_status()
     yield
     await prisma.disconnect()
 
@@ -18,6 +22,11 @@ app=FastAPI(title="Amazon api",lifespan=lifespan)
 
 #register router
 app.include_router(member_router,prefix="/member")
+app.include_router(product_router,prefix="/product",dependencies=[Depends(get_current_member)])
+app.include_router(product_image_router,prefix="/product_image",dependencies=[Depends(get_current_member)])
+app.include_router(client_order_product_router,prefix="/client_order_product",dependencies=[Depends(get_current_member)])
+app.include_router(client_order_router,prefix="/client_order",dependencies=[Depends(get_current_member)])
+
 
 @app.get("/")
 async def root():
@@ -26,4 +35,4 @@ async def root():
     return {"message":"API is running"}
 
 if __name__=="__main__":
-    uvicorn.run("app:app",host="127.0.0.1",port=5000,reload=True)
+    uvicorn.run("app:app",host="127.0.0.1",port=5000,reload=True,reload_excludes=["uploads/*"])
